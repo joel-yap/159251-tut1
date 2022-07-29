@@ -22,5 +22,10 @@ public class Greeter {
     String name = args[2];
     Greeter greeter = new Greeter(language, country, name);
     System.out.println(greeter.sayHello());
+    //bug fix
+    if (args.length == 0) {
+      System.out.println("Proper Usage is: java program filename");
+      System.exit(0);
+    }
   }
 }
